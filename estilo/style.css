@@ -59,7 +59,7 @@ header>p{
     padding-left: 10px; /*Afastamento da margem e do texto ara não bater nas laterais do navegador*/
     max-width: 500px; /*tamanho máximo do bloco de texto*/
     margin: auto; /*margem centalizada flexivel*/
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.377);
 }
 nav{
