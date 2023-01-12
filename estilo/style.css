@@ -1,0 +1,184 @@
+@charset "UFT-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face{
+    font-family: "Android";
+    src: url(../fontes/idroid.otf) format(opentype);
+    font-weight: normal;
+}
+
+
+:root{
+    --cor0:#C5EBD6;
+    --cor1:#83E1AD;
+    --cor2:#3DDC84;
+    --cor3:#2FA866;
+    --cor4:#1a5c37;
+    --cor5:#063D1E;
+
+    --fonte-padrao:Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque:'Bebas Neue', 'cursive';
+    --fonte-android:'Android', 'cursive';
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color:var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after{ /*::after é depois dele*/
+    content: '\00A0\1F517'; /*icone ou emoji*/
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    color: var(--cor0);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header>h1{
+    font-family: var(--fonte-destaque);
+    color: white;
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.377);
+}
+
+header>p{
+    color:var(--cor0);
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em; /*tamanho*/
+    padding-right: 10px;
+    padding-left: 10px; /*Afastamento da margem e do texto ara não bater nas laterais do navegador*/
+    max-width: 500px; /*tamanho máximo do bloco de texto*/
+    margin: auto; /*margem centalizada flexivel*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.377);
+}
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+}
+
+nav>a{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; /* perde o subinhado de link */
+    font-weight: bold; /* peso da fonte: lighter(fino), normal, negrito(bold), grosso(bolder) */
+    transition-duration: 0.5s; /* 0.5 segundos de transição ao passar o mouse */
+
+}
+
+nav>a:hover{
+    background-color: var(--cor3);
+    color: var(--cor4);
+    
+}
+
+main{
+    background-color: white;
+    min-width:300px; /*tamanho mínimo da main*/
+    max-width:1000px; /*tamanho máximo da main*/
+    margin: auto; /*margem centralizada flexivel*/
+    padding: 20px; /*Afastamento da margem e do texto*/
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.418); /*Sombra*/
+    margin-bottom: 30px; /*Afastamento inferior de baixo*/
+    border-bottom-left-radius: 10px; /*bordas arredondadas de baixo*/
+    border-bottom-right-radius: 10px;
+}
+
+main img{
+    width: 100%;
+}
+
+main img.pequena{ /*o ponto deve estar colado no nome da classe*/
+    max-width: 350px;
+    display: block;
+    margin:auto; /*só funciona com blocos, imagem não é bloco*/
+}
+
+main h1{
+    color: var(--cor4);
+    font-family: var(--fonte-android);
+    font-size: 1.8em;
+}
+
+main h2{
+    font-family: var(--fonte-android);
+    color:var(--cor4);
+    font-size: 1.3em;
+
+}
+
+main p{
+    margin:15px 0px; /*espaçamento entre paragrafos e blocos*/
+    text-align: justify;
+    text-indent: 30px; /*recuo da primeira linha do paragrafo*/
+    line-height: 2em; /*espaçamento entre linhas*/
+    font-size: 1em; /*tamanho*/
+}
+
+main strong{
+    color:var(--cor4);
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: none; /*sem estilo de links*/
+    font-weight: bold;
+    color: var(--cor4);
+
+}
+
+main a:hover{
+    text-decoration: underline; /*ganha subinhado ao passar o mouse*/
+    color: var(--cor3);
+  
+}
+
+div.video{
+    background-color: var(--cor5);
+    padding: 20px;
+    margin: 0px -20px 30px -20px;
+    position: relative;
+    padding-bottom: 56%;
+}
+
+div.video>iframe{
+    position: absolute;
+    top:5%;
+    left:5%;
+    width: 90%;
+    height: 90%;
+}
+aside{
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.397);
+}
+
+aside h3{
+    background-color: var(--cor5);
+    color: var(--cor0);
+    padding: 10px; 
+    margin: -10px -10px 0px -10px; /*colou o h3 na margem da aside*/
+    border-radius: 10px 10px 0px 0px; /*colocou bordas arredondadas apenas na parte de cima*/
+}
+aside>ul{
+    list-style-type: '\2714\00A0\00A0'; /*icones ou emoji de check nas listas e \00A0 é espaço*/
+    list-style-position: inside; /*bolinhas das listas vai para dentro do aside*/
+    columns: 2;
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+}
